@@ -1,0 +1,704 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	background-color: #fff;
+}
+
+.container {
+	max-width: 1200px;   /*galima +32px*/
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 16px; /*pats pasirinkau. is abieju pusiu visalaika pasilinks paddingas nepriklausomai nuo ekrano dydzio*/
+	padding-left: 16px;  /*pats pasirinkau*/
+}
+
+.header-billboard {
+	background-image: url(../images/background1.png);
+	overflow: hidden; /*pasalinau margina*/
+	background-size: cover; /*mazinant dydi, mazeja backgroundo paveiksleleis*/
+	border-top: 1px solid #e7e7e7;
+}
+
+.navigation p {
+	margin: 0;
+}
+
+.navigation {
+	padding-top: 38.5px; /*nuo virsaus iki logo yra 51px. line height logo tekste yra 25. 25/2 yra 12.5; taigi 51-12.5=38.5;*/
+	padding-bottom: 38.5px; /*apacioje taip pat iki sectiono zemesnio 51 px;*/
+	padding-right: 0;
+	padding-left: 0;
+	display: flex; /*kad viduje esantys child elementai galetu buti vienoj eilutej*/
+	justify-content: space-between; /*vienas el. vienam kraste, kitas kitam*/
+	align-items: center;
+}
+
+.logo {
+	font-size: 2.5rem;
+	font-weight: 300;
+	line-height: 1.625;
+	color: #4d4d4d;
+	text-decoration: none;
+}
+
+.menu {
+	list-style: none;
+	margin: 0; /* saliname defaultini margin ir padding*/
+	padding: 0;
+}
+
+.menu li {
+	display: inline-block;
+	margin-left: 57px; 
+}
+
+.menu li:hover {
+	text-decoration: underline;
+}
+
+.menu li a {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	color: #4d4d4d;
+	letter-spacing: 0.03em;
+	text-decoration: none;
+}
+/*///////////////////Hamburgeris////////////////////*/
+.burger {
+	display: none;
+	cursor: pointer;
+}
+
+.burger div{
+	width: 25px;
+	height: 3px;
+	background-color: #A8A8A8;
+	margin: 5px;
+}
+
+@media only screen and (max-width: 850px) {
+	body {
+		overflow-x: hidden; /*paslepiam patraukta i desine*/
+	}
+	.menu {
+		position: absolute;
+		right: 0px;
+		/*height: 92vh;*/
+		top: 100px;
+		background-color: #fff;
+		opacity: 0.8;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		transform: translateX(100%); /*patraukiam i desine*/
+		transition: transform 0.5s ease-in; /*animacija kad iseitu is sono*/
+	}
+	.menu li {
+		/*opacity: 1;*/
+		margin-left: 0;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	.menu li a {
+		font-weight: bold;
+	}
+	.burger {
+		display: block;
+		transition: transform 0.5s;
+	}
+}
+
+.menu-active {
+	transform: translateX(0%);
+}
+
+.burger.rotated {
+  	transform: rotate(90deg);
+  	transition: transform 0.5s;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.header-content {
+	text-align: center;
+	margin-top: 214.5px;   /*227-12.5 del line height*/
+	margin-bottom: 249px;  /**/
+}
+
+.header-content h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	color: #4d4d4d;
+	font-size: 3.125rem;
+	letter-spacing: -0.01em;
+	line-height: 1;
+}
+
+.header-content p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	color: #4d4d4d;
+	letter-spacing: 0.05em;
+	line-height: 1;
+	margin-bottom: 0;
+	margin-top: 28px;
+}
+
+.button {
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 1.125rem;
+	line-height: 1;
+	letter-spacing: 0.03em;
+	color: #fff;
+	background-color: #4d4d4d;
+	padding-top: 17px;  /*18px-1 del line hight*/
+	padding-bottom: 17px; /*18px-1 del line hight*/
+	padding-left: 78px;
+	padding-right: 78px;
+	margin-top: 42px;
+	display: inline-block;
+	border-radius: 25px;
+}
+
+.button img {
+	margin-left: 9px;
+	margin-bottom: 3px;
+}
+
+.services {
+ 	display: flex; /*child elementai praranda boxines savybes, kadangi tevinis elementas display flex*/
+ 	justify-content: space-between; /*horizontaliai isdestom child elementus*/
+ 	align-items: stretch;
+}
+
+.column {
+	width: 29%;
+	padding-top: 100px;
+	text-align: center;
+	max-width: 333px;
+	padding-bottom: 96px; /*100-4 del line eight*/
+	font-size: 0; /*tam kad po viduje esanciu paveiskleleiu nebutu tarpo*/
+}
+
+.services .column h3 {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.375rem;
+	line-height: 1;
+	letter-spacing: 0.05em;
+	color: #4d4d4d;
+	text-transform: uppercase;
+	padding-top: 31px;   /*atiminejam del line height*/
+	padding-bottom: 37px;  /*atiminejam del line height is virsaus ir apacios*/
+}
+
+.services .column p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.875rem;
+	line-height: 1.57142857143;
+	letter-spacing: 0.05em;
+	color: #727272;
+	margin: 0;
+	hyphens: auto;
+}
+
+@media only screen and (max-width: 720px) {
+	.column {
+		width: 100%;
+		padding-bottom: 0px;
+	}
+
+	.services {
+		justify-content: center;
+		flex-wrap: wrap;
+		padding-bottom: 100px;
+	}
+
+	.services .column h3 {
+		padding-top: 15px;
+		padding-bottom: 15px;  
+	}
+
+}
+
+.video-section{
+	text-align: center;
+}
+
+.video-section-content h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1.875rem;
+	line-height: 1.9333333;
+	letter-spacing: 0.03em;
+	color: #4d4d4d;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.video-section-content p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.375;
+	letter-spacing: 0.03em;
+	color: #727272;
+	margin: 0;
+	padding-bottom: 77px; /*80-3 del line height*/
+	margin-left: auto;  /*sekancios trys eilutes kad tektas persikeltu i kita puse kaip psd*/
+	margin-right: auto;
+	max-width: 642px;
+}
+
+.video-section-content {
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	padding-top:66px; /* 80-14 */
+	font-size: 0; /*pasalinau tarpa po video*/
+}
+
+.video-wrapper-section {
+	max-width: 686px;
+	margin-right: auto; /*iscentruojam video:*/
+	margin-left: auto;
+}
+
+/*sekants du selectoriai kad youtube video proporcija islaikyti 16:9*/
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9  */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.recent-work h2 {
+	text-align: center;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 1.875rem;
+	line-height: 1.9333333;
+	letter-spacing: 0.05em;
+	color: #4d4d4d;
+	text-transform: uppercase;
+	padding-top: 85px;      /*99-14*/
+	padding-bottom: 68px;   /*82-14*/
+}
+
+.projects-space {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap; /*kad persikeltu i kita eilute jei ekranas mazas*/
+}
+
+.recent-work {
+	padding-bottom: 100px;
+}
+
+.project img {
+	display: block; /*tarpa pasalinam po paveiksleliu*/
+	width: 100%;
+}
+
+.project {
+	position: relative;
+	overflow: hidden;  /*kad nerodytu to kas netelpa*/
+	width: calc(25% - 50px);  /*minus 50px del marginu*/
+	margin-left: 25px;
+	margin-right: 25px;
+
+}
+
+@media only screen and (max-width: 992px) {
+  .project {
+    width: calc(50% - 50px);
+    margin-bottom:50px;
+  }
+  .recent-work {
+  	padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .project {
+    width: calc(100% - 50px);
+    margin-bottom:50px;
+  }
+  .recent-work {
+  	padding-bottom: 50px;
+  }
+}
+
+.animated-box {
+	position: absolute;
+	width: 100%;  /*per visa paveiksleli*/
+	bottom: 0px; /*kad butu paveikslelio apacioje*/
+	left: 0px;
+	background-color: #575757;
+	transition: all 0.3s;
+	transform: translate(0,100%);
+	text-align: center;
+}
+
+.animated-box p {
+	color: white;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: 0.05em;
+}
+
+.project:hover .animated-box {
+	transform: translate(0,0);
+}
+
+.subscription-box {
+	background-color: #f5f5f5;
+	overflow: hidden; /*pasalinau apacioje balta juosta*/
+	text-align: center;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.subscription-box-content h2{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 1.875rem;
+	line-height: 1.9333333;
+	letter-spacing: 0.05em;
+	color: #4d4d4d;
+	text-transform: uppercase;
+	padding-top: 86px; /*100-14 del line height*/
+	padding-bottom: 14px; /*33-14-5*/
+}
+
+.subscription-box-content p {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.875rem;
+	line-height: 1.78571428571;
+	letter-spacing: 0.05em;
+	color: #717171;
+}
+
+.subscription-button {
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1rem;
+	line-height: 1;  /*tikras line height 3.625 bet darau 1, nes eilute vistiek nepersikelia*/
+	letter-spacing: 0.05em;
+	color: #4d4d4d;
+	padding-top: 15px;  /*16-1*/
+	padding-bottom: 17px; /*18px-1*/
+	padding-left: 42px;
+	padding-right: 42px;
+	margin-top: 46px; /*51-5*/
+	border: 2px solid #4d4d4d;
+	display: inline-block;
+	border-radius: 27px;
+	margin-bottom: 91px;
+}
+
+.networks-space {
+	display: flex;
+	justify-content: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.network-box {
+	border: 2px solid #4d4d4d;
+	width: 68px;
+	height: 70px;
+	position: relative;
+	transition: all 0.5s;
+}
+
+.networks-space a {
+	margin-left: 25px; /*nes bendras 50px*/
+	margin-right: 25px;
+}
+
+.network-box:hover {
+	border: 0;
+	background-color: #55acee;
+
+}
+
+.network-box img {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: all 0.5s;
+}
+.network-box:hover img.hovered{
+	opacity: 0;
+}
+
+@media only screen and (max-width: 480px) {
+	.networks-space {
+		flex-wrap: wrap;
+	}
+
+	.networks-space a {
+		margin-bottom: 25px;
+		margin-top: 25px;
+	}	
+}
+
+footer {
+	background-color: #3b3b3b;
+	overflow: hidden; /*pasalinau margina*/
+}
+
+.footer-content .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-column p {
+   	margin: 0;
+}
+
+.footer-column {
+	padding-bottom:97px; /*103-5.5*/
+	width: 23%;  /*viena stulpeliui 23 proc tevinio el. plocio(imta pagal placiausia)*/
+}
+
+.footer-column h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 1.125rem;
+	line-height: 1.389;
+	letter-spacing: 0.05em;
+	color: #fff;
+	margin: 0;
+	padding-top:94px; /*98-4 del line height */
+}
+
+.footer-column li a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.875rem;
+	line-height: 2.14;
+	letter-spacing: 0.05em;
+	color: #ebebeb;
+	text-decoration: none;
+}
+
+.footer-menu {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 16px;/*28-4-8*/
+	margin-left: : 0;
+	margin-bottom: 0;
+}
+
+.adress {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.875rem;
+	line-height: 1.7857;
+	letter-spacing: 0.03em;
+	color: #ebebeb;
+}
+
+.phone-number {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 1.7857;
+	letter-spacing: 0.03em;
+	color: #b5b5b5;
+	padding-bottom: 10px; /*21-5.5-5.5*/
+}
+
+.map-link a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.875rem;
+	line-height: 1.7857;
+	letter-spacing: 0.03em;
+	color: #b5b5b5;
+	text-decoration: none;
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.about p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.875rem;
+	line-height: 1.7857;
+	letter-spacing: 0.03em;
+	color: #ebebeb;
+}
+
+.about a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 0.875rem;
+	line-height: 1.7857;
+	letter-spacing: 0.03em;
+	color: #b5b5b5;
+}
+
+.info-text {
+	margin-top: 30px; /*39-4-5*/
+}
+
+.credits p {
+	margin-top: 12px;/*23-5.5-5.5*/
+}
+
+@media only screen and (max-width: 480px) {
+	.footer-content .container {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.footer-column {
+		width: 45%;
+		padding-bottom: 15px;
+		text-align: center;
+	}
+
+	.footer-column:nth-of-type(1) { order: 3; }
+	.footer-column:nth-of-type(2) { order: 2; }
+	.footer-column:nth-of-type(3) { order: 1; }
+	.footer-column:nth-of-type(4) { order: 4; }
+
+	.footer-column h3 {
+		padding-top: 60px;
+	}
+}
+/*/////////////////////////////////////////////*/
+.pop-up {
+	position: fixed;
+	width: 50%;
+	height: 50%;
+	background-color: #fff;
+	box-shadow: 0px 0px 15px #000000;
+	top: 50%;  /*trys eilutes, kad centre ekrano butu:*/
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 3px;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s;
+	/**/
+	margin-bottom: 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 0.8rem;
+	line-height: 1;
+	letter-spacing: 0.05em;
+	color: #4d4d4d;
+	z-index: 2;
+}
+
+.pop-up.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+.pop-up #pop-up-close img {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+	width: 4%;
+}
+
+.pop-up input {
+	margin-bottom: 5px;
+}
+
+.pop-up h3 {
+	font-size: 1.5rem;
+}
+
+.pop-up #submit-btn {
+	border: none;
+	margin-top: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/*/////////////////////////////////////////////*/
+#to-top-button {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 26px;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	color: #DDDDDD;
+	cursor: pointer;
+	outline: none;
+	border: 2px solid #f5f5f5;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+#to-top-button:hover {
+	border: 3px solid #A8A8A8;
+	color: #55ACEE;
+}
+
+@media only screen and (max-width: 480px) {
+	.pop-up {
+		width: 80%;
+	}
+
+	#to-top-button {
+		border: none;
+		bottom: 10px;
+		right: 10px;
+	}
+
+	#to-top-button:hover {
+		border: none;
+	}
+}

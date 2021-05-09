@@ -4,13 +4,246 @@
 	<title>Minimal</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/03d6f4bc28.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 
 <body>
 
- <h1>Puslapio Antraste</1h>  
-	
+	<button id="to-top-button"><i class="fas fa-arrow-circle-up"></i></button>
 
-	
+	<header>
+		<div class="container">
+
+			<div class="navigation">
+				<a href="#" class="logo">
+					<p>Minima</p>
+				</a>
+
+				<ul class="menu" id="menu">
+					<li><a href="#services" class="scrollable">Services</a></li>
+					<li><a href="#our-story" class="scrollable">Our story</a></li>
+					<li><a href="#work" class="scrollable">Work</a></li>
+					<li><a href="#journal" class="scrollable">Journal</a></li>
+					<li><a href="#contact" class="scrollable">Contact</a></li>
+				</ul>
+
+				<div class="burger" id="burger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+
+			</div>
+		</div>
+
+
+			<!-- sitam backgrounda: -->
+			<div class="header-billboard">
+				<div class="header-content">
+					<h1>Minima Clean & Minimal Template</h1>
+					<p>excepteur sint occaecat cupidatat non proident</p>
+					<a class="button" href="#">Start here<img src="images/arrow.png"></a>
+				</div>
+			</div>
+	</header>
+
+
+	<section class="container services" id="services"> 
+				<div class="column">
+					<img src="images/shape_7.png">
+					<h3>Duis aute irure</h3>
+					<p>Excepteur sint occaecat cupi datat non it proident, sunt in culpa qui officia dese runtorn mollit anim id est laborum.</p>	
+				</div>
+
+				<div class="column">
+					<img src="images/shape_8.png">
+					<h3>Duis aute irure</h3>
+					<p>Excepteur sint occaecat cupi datat non it proident, sunt in culpa qui officia dese runtorn mollit anim id est laborum.</p>	
+				</div>
+
+				<div class="column">
+					<img src="images/shape_9.png">
+					<h3>Duis aute irure</h3>
+					<p>Excepteur sint occaecat cupi datat non it proident, sunt in culpa qui officia dese runtorn mollit anim id est laborum.</p>	
+				</div>
+	</section>
+
+
+	<section class="container video-section" id="our-story">
+
+				<div class="video-section-content">
+							<h2>sunt in culpa qui officia deserunt mollit</h2>
+							<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<div class="video-wrapper-section">
+						<div class="videoWrapper">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/k0MKTsxWBNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+
+		
+	</section>
+
+
+	<section class="container recent-work" id="work">
+			<h2>Recent work</h2>
+
+			<div class="projects-space">
+				<div class="project">
+					<a href="#"><img src="https://picsum.photos/262/320?random=1"></a>
+					<div class="animated-box">
+						<p>Brand Project &rarr;</p>
+						<!-- <img src="images/arrow2.png"> -->
+					</div>
+				</div>
+
+				<div class="project">
+					<a href="#"><img src="https://picsum.photos/262/320?random=2"></a>
+					<div class="animated-box">
+						<p>Brand Project &rarr;</p>
+						<!-- <img src="images/arrow2.png"> -->
+					</div>
+				</div>
+
+				<div class="project">
+					<a href="#"><img src="https://picsum.photos/262/320?random=3"></a>
+					<div class="animated-box">
+						<p>Brand Project &rarr;</p>
+						<!-- <img src="images/arrow2.png"> -->
+					</div>
+				</div>
+
+				<div class="project">
+					<a href="#"><img src="https://picsum.photos/262/320?random=4"></a>
+					<div class="animated-box">
+						<p>Brand Project &rarr;</p>
+						<!-- <img src="images/arrow2.png"> -->
+					</div>
+				</div>
+			</div>
+		
+	</section>
+
+
+	<section class="subscription-box" id="journal">
+		<div class="subscription-box-content">
+			<h2>Join our subscribers.</h2>
+
+			<p>10 000 sint occaecat cupidatat non proident sunt in culpa qui officia.</p>
+
+			<a class="subscription-button" href="#" id="sub-button">Click here to subscribe</a>
+
+			<div class="pop-up">
+				<div class="pop-up-content">
+				<h3>Subscribe to our Newsletter</h3>
+				<form>
+					<input type="text" name="name" placeholder="Name"><br>
+					<input type="email" name="email" placeholder="E-mail address"><br>
+
+					<div class="newsletter">
+					<input type="checkbox" checked="checked" name="newsletter"> Daily Newsletter <br>
+					</div>
+
+					<input type="submit" value="Subscribe" id="submit-btn">
+				</form>
+				</div>
+			<span id="pop-up-close"><img src="images/close-button1.png"></span>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="container social-media">
+		  <div class="networks-space">
+
+		  	<a href="https://www.facebook.com/">
+			<div class="network-box">
+				<img src="images/facebook-white.png">
+				<img class="hovered" src="images/facebook.png">
+			</div>
+			</a>
+
+			<a href="https://twitter.com/">
+			<div class="network-box">
+				<img src="images/twitter.png">
+				<img class="hovered" src="images/twitter-dark.png">
+			</div>
+			</a>
+
+			<a href="https://dribbble.com/">
+			<div class="network-box">
+				<img src="images/dribble-white.png">
+				<img class="hovered" src="images/dribble.png">
+			</div>
+			</a>
+
+			<a href="https://www.google.com/">
+			<div class="network-box">
+				<img src="images/google-white.png">
+				<img class="hovered" src="images/google.png">
+			</div>
+			</a>
+		 </div>
+
+
+	</section>
+
+	<footer class="footer-content" id="contact">
+		<div class="container">
+
+		  <div class="footer-column">
+			<h3>Location</h3>
+			<div class="info-text">
+			<p class="adress">1401 South Grand Avenue<br>Los Angeles, CA 90015</p>
+			<p class="phone-number">(213) 748-2411</p>
+			<div class="map-link">
+			<span class="underlined"><a href="#">see it in the map</span> &rarr;</a>
+			</div>
+			</div>
+		  </div>
+
+		  <div class="footer-column">
+			<h3>Company</h3>
+			<ul class="footer-menu">
+				<li><a href="#">Our story</a></li>
+				<li><a href="#">Mission</a></li>
+				<li><a href="#">Journal</a></li>
+				<li><a href="#">Careers</a></li>
+			</ul>
+		  </div>
+
+		  <div class="footer-column">
+			<h3>Support</h3>
+			<ul class="footer-menu">
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Policies</a></li>
+			</ul>
+		  </div>
+
+		  <div class="footer-column">
+			<h3>Minima.</h3>
+			<div class="about info-text">
+			<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<span class="credits">
+			<p>Template made by <a href="#">pixelhint.com</a></p>
+			</span>	
+			</div>
+			
+		  </div>
+
+		</div>
+	</footer>
+
+
+<script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
